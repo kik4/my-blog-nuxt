@@ -3,13 +3,16 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "my-blog-nuxt",
+    title: "kik4's page",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Nuxt.js project" }
+      { hid: "description", name: "description", content: "kik4's page" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;subset=japanese", rel: "stylesheet" }
+    ]
   },
   /*
   ** Customize the progress bar color
@@ -32,5 +35,7 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  //
+  css: ["@/assets/css/reboot.css"]
 }
