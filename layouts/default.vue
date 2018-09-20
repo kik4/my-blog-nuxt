@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <section class="header">
-      <a
-        href="/"
-        class="header_title_text">kik4</a>
+      <nuxt-link
+        to="/"
+        class="header_title_text">kik4</nuxt-link>
     </section>
     <section class="main">
       <nuxt/>

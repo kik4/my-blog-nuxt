@@ -1,13 +1,7 @@
 <template>
   <div>
     <h1 class="title">トップページ</h1>
-    <p>
-      特に意味のないカウンタ: {{ count }}<br>
-      <input
-        type="button"
-        value="Click!"
-        @click="count++">
-    </p>
+    <p><nuxt-link to="counter">カウンタへ</nuxt-link></p>
   </div>
 </template>
 
@@ -17,6 +11,9 @@ export default {
     return {
       count: 0
     }
+  },
+  head: {
+    titleTemplate: "kik4"
   }
 }
 </script>
