@@ -1,11 +1,9 @@
 <template>
   <div class="container">
     <section class="header">
-      <p>
-        <a
-          href="/"
-          class="header_title_text">kik4</a>
-      </p>
+      <a
+        href="/"
+        class="header_title_text">kik4</a>
     </section>
     <section class="main">
       <nuxt/>
@@ -23,9 +21,11 @@ html {
 .main {
   background: white;
   color: #222222;
+  padding: 5px;
 }
 .header {
   background: #222222;
+  padding: 5px;
 }
 .header_title_text,
 .header_title_text:hover {
