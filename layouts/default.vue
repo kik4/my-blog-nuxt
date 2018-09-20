@@ -1,16 +1,15 @@
 <template>
   <div class="container">
     <section class="header">
-      <h1>kik4's page</h1>
+      <p>
+        <a
+          href="/"
+          class="header_title_text">kik4</a>
+      </p>
     </section>
-    <div class="flexbox">
-      <section class="side">
-        <p>The Little Prince (French: Le Petit Prince), ...afafa</p>
-      </section>
-      <section class="main">
-        <nuxt/>
-      </section>
-    </div>
+    <section class="main">
+      <nuxt/>
+    </section>
   </div>
 </template>
 
@@ -24,30 +23,22 @@ html {
 .main {
   background: white;
   color: #222222;
-  width: 70%;
 }
-.side {
+.header {
   background: #222222;
+}
+.header_title_text,
+.header_title_text:hover {
   color: white;
-  width: 30%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 32px;
 }
-.main,
-.side {
-  padding: 2%;
-  border-radius: 10px;
-}
-
 /* Responsive */
 @media (min-width: 600px) {
   .container {
     width: 80%;
-  }
-  .flexbox {
-    display: -webkit-flex;
-    display: flex;
-  }
-  .main {
-    margin: 0;
+    max-width: 1080px;
   }
 }
 </style>

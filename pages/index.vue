@@ -1,28 +1,24 @@
 <template>
-  <section class="container">
-    <div>
-      <h1 class="title">
-        my-blog-nuxt
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+  <div>
+    <h1 class="title">トップページ</h1>
+    <p>
+      特に意味のないカウンタ: {{ count }}<br>
+      <input
+        type="button"
+        value="Click!"
+        @click="count++">
+    </p>
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data: function() {
+    return {
+      count: 0
+    }
+  }
+}
 </script>
 
 <style>
