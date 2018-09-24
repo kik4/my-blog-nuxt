@@ -14,18 +14,20 @@
 <style>
 html {
   font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
 }
 .container {
   margin: auto;
 }
 .main {
   background: white;
-  color: #222222;
-  padding: 5px;
+  color: #444444;
+  padding: 5px 0;
 }
 .header {
-  background: #222222;
-  padding: 5px;
+  background: #999932;
+  padding: 5px 15px;
+  margin-bottom: 10px;
 }
 .header_title_text,
 .header_title_text:hover {
@@ -40,6 +42,13 @@ html {
     width: 80%;
     max-width: 1080px;
   }
+}
+
+.page_title {
+  border-color: #999932;
+  border-width: 0 0 1px 3px;
+  border-style: solid;
+  padding: 0 0 3px 7px;
 }
 </style>
 
