@@ -1,4 +1,4 @@
-# my-blog-nuxt
+# my-portrait-nuxt
 
 > Nuxt.js project
 
