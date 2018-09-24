@@ -38,5 +38,8 @@ module.exports = {
     }
   },
   //
-  css: ["@/assets/css/reboot.css"]
+  css: ["@/assets/css/reboot.css"],
+  generate: {
+    fallback: true
+  }
 }

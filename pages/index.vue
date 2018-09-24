@@ -1,5 +1,5 @@
 <template>
-  <div class="page_container">
+  <div class="container">
     <h1 class="page_title">ポートフォリオ</h1>
     <div>
       <h2>プロフィール</h2>

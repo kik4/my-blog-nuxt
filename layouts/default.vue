@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="layout_container">
     <section class="header">
       <nuxt-link
         to="/"
@@ -16,7 +16,7 @@ html {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
 }
-.container {
+.layout_container {
   margin: auto;
 }
 .main {
@@ -38,7 +38,7 @@ html {
 }
 /* Responsive */
 @media (min-width: 600px) {
-  .container {
+  .layout_container {
     width: 80%;
     max-width: 1080px;
   }
