@@ -23,7 +23,10 @@
       <p><nuxt-link to="counter">カウンタへ</nuxt-link></p>
     </div>
     <div>
-      Deployed by Ciecle CI
+      Hosted on <a href="https://github.com/kik4/my-portfolio-nuxt">Github</a>, deployed by CiecleCI
+    </div>
+    <div>
+      ©2018 kik4, All Rights Reserved.
     </div>
   </div>
 </template>
