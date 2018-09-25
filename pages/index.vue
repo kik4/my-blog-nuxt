@@ -23,7 +23,7 @@
       <p><nuxt-link to="counter">カウンタへ</nuxt-link></p>
     </div>
     <div>
-      Hosted on <a href="https://github.com/kik4/my-portfolio-nuxt">Github</a>, deployed by CiecleCI
+      サイトのリポジトリ：<a href="https://github.com/kik4/my-portfolio-nuxt">Github</a>, デプロイ：CiecleCI, ホスト：Firebase
     </div>
     <div>
       ©2018 kik4, All Rights Reserved.
