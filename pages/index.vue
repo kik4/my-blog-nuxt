@@ -22,6 +22,9 @@
     <div>
       <p><nuxt-link to="counter">カウンタへ</nuxt-link></p>
     </div>
+    <div>
+      Deployed by Ciecle CI
+    </div>
   </div>
 </template>
 
