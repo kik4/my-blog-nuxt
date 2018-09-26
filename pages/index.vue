@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="container">
     <h1 class="page_title">ポートフォリオ</h1>
     <div>
@@ -20,13 +20,11 @@
       </ul>
     </div>
     <div>
-      <p><nuxt-link to="counter">カウンタへ</nuxt-link></p>
-    </div>
-    <div>
-      サイトのリポジトリ：<a href="https://github.com/kik4/my-portfolio-nuxt">Github</a>, デプロイ：CiecleCI, ホスト：Firebase
-    </div>
-    <div>
-      ©2018 kik4, All Rights Reserved.
+      <h2>個人の制作物</h2>
+      <dl>
+        <dt>FlashANZAN (<a href="https://www.vector.co.jp/soft/winnt/edu/se480770.html">Vector</a>)</dt>
+        <dd>フラッシュ暗算練習ソフト。何年も前に作ったのでハンドルも違いますしコードも残っていませんが、ちゃんと使えると思います。</dd>
+      </dl>
     </div>
   </div>
 </template>
@@ -44,11 +42,11 @@ h2 {
   font-size: 1.3rem;
   padding-top: 3px;
 }
+.profile > li {
+  padding: 2px 0;
+}
 .profile b {
   padding-right: 5px;
-}
-li {
-  padding: 2px 0;
 }
 </style>
 
