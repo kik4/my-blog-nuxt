@@ -55,6 +55,7 @@ html {
 }
 
 .footer {
+  margin-top: 15px;
   background: #999932;
   padding: 5px 15px;
   color: white;
