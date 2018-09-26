@@ -136,7 +136,7 @@
         <ul>
           <li>
             詳細
-            <ul><li>フラッシュ暗算練習ソフト。何年も前に作ったのでハンドルが違います。コードも残っていませんが、ちゃんと使えると思います。</li></ul>
+            <ul><li>Windows用フラッシュ暗算練習ソフト。何年も前に作ったのでハンドルが違います。コードも残っていませんが、ちゃんと使えると思います。</li></ul>
           </li>
         </ul>
       </ul>
@@ -173,7 +173,12 @@ h2 {
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 12px;
+}
+@media (min-width: 600px) {
+  ul {
+    padding-left: 20px;
+  }
 }
 .no_list_padding {
   padding: 0;

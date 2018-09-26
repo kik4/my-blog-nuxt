@@ -1,9 +1,11 @@
 <template>
   <div class="layout_container">
     <section class="header">
-      <nuxt-link
-        to="/"
-        class="header_title_text">kik4</nuxt-link>
+      <div class="header_image">
+        <nuxt-link
+          to="/"
+          class="header_title_text">kik4</nuxt-link>
+      </div>
     </section>
     <section class="main">
       <nuxt/>
@@ -17,20 +19,27 @@
 <style>
 html {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 15px;
+  font-size: 12.5px;
+}
+body {
+  background: #eeeeee;
 }
 .layout_container {
   margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .main {
   background: white;
   color: #444444;
-  padding: 5px 0;
+  padding: 10px 4px 4px 4px;
 }
 .header {
+  background: white;
+}
+.header_image {
   background: #999932;
-  padding: 5px 15px;
-  margin-bottom: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 15% 80%, 9% 100%, 10% 80%, 0% 75%);
+  padding: 5px 0 20px 15px;
 }
 .header_title_text,
 .header_title_text:hover {
@@ -44,6 +53,10 @@ html {
   .layout_container {
     width: 80%;
     max-width: 1080px;
+    font-size: 15px;
+  }
+  .main {
+    padding: 12px;
   }
 }
 
@@ -55,9 +68,8 @@ html {
 }
 
 .footer {
-  margin-top: 15px;
   background: #999932;
-  padding: 5px 15px;
+  padding: 15px;
   color: white;
   font-size: 0.8rem;
 }
