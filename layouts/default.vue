@@ -9,14 +9,7 @@
       <nuxt/>
     </section>
     <section class="footer">
-      <div class="footer_tags">
-        <div>サイトのリポジトリ：<a href="https://github.com/kik4/my-portfolio-nuxt">Github</a></div>
-        <div>デプロイ：CiecleCI</div>
-        <div>ホスト：Firebase</div>
-      </div>
-      <div>
-        ©2018 kik4, All Rights Reserved.
-      </div>
+      ©2018 kik4, All Rights Reserved.
     </section>
   </div>
 </template>
@@ -66,18 +59,6 @@ html {
   padding: 5px 15px;
   color: white;
   font-size: 0.8rem;
-}
-.footer a {
-  color: white;
-  text-decoration: underline;
-}
-.footer_tags {
-  display: flex;
-  flex-wrap: wrap;
-}
-.footer_tags > div {
-  margin-right: 8px;
-  white-space: nowrap;
 }
 </style>
 
