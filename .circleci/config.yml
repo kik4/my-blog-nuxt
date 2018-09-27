@@ -22,22 +22,35 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "page/package.json" }}
+            - v1-dependencies-{{ checksum "firebase/hosting/package.json" }}
+            - v1-dependencies-{{ checksum "firebase/functions/package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
       - run:
-          working_directory: page
+          working_directory: firebase/hosting
+          command: |
+            yarn install
+      - run:
+          working_directory: firebase/functions
           command: |
             yarn install
 
       - save_cache:
           paths:
-            - page/node_modules
+            - firebase/hosting/node_modules
+          key: v1-dependencies-{{ checksum "page/package.json" }}
+      - save_cache:
+          paths:
+            - firebase/functions/node_modules
           key: v1-dependencies-{{ checksum "page/package.json" }}
 
       - run:
-          working_directory: page
+          working_directory: firebase/hosting
           command: |
             yarn run generate
+
+      - run:
+          working_directory: firebase
+          command: |
             ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --project=$FIREBASE_PROJECT_ID
