@@ -41,5 +41,6 @@ module.exports = {
   css: ["@/assets/css/reboot.css"],
   generate: {
     fallback: true
-  }
+  },
+  plugins: [{ src: "~plugins/ga.js", ssr: false }]
 }
