@@ -39,11 +39,11 @@ jobs:
       - save_cache:
           paths:
             - firebase/hosting/node_modules
-          key: v1-dependencies-{{ checksum "page/package.json" }}
+          key: v1-dependencies-{{ checksum "firebase/hosting/package.json" }}
       - save_cache:
           paths:
             - firebase/functions/node_modules
-          key: v1-dependencies-{{ checksum "page/package.json" }}
+          key: v1-dependencies-{{ checksum "firebase/functions/package.json" }}
 
       - run:
           working_directory: firebase/hosting
