@@ -5,6 +5,16 @@
         <nuxt-link
           to="/"
           class="header_title_text">kik4</nuxt-link>
+        <div>
+          <template v-if="$nuxt.$route.name !== 'blog'">
+            <nuxt-link 
+              to="/blog" 
+              class="menu">blog</nuxt-link>
+          </template>
+          <template v-else>
+            <span class="menu">blog</span>
+          </template>
+        </div>
       </div>
     </section>
     <section class="main">
@@ -16,6 +26,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  created() {
+    console.log(this.$nuxt.$route)
+  },
+}
+</script>
+
 <style>
 html {
   font-family: "Noto Sans JP", sans-serif;
@@ -23,6 +41,7 @@ html {
 }
 body {
   background: #eeeeee;
+  overflow-y: scroll; /* ガタつき防止 */
 }
 .layout_container {
   margin: auto;
@@ -33,13 +52,17 @@ body {
   color: #444444;
   padding: 10px 4px 4px 4px;
 }
+
 .header {
   background: white;
 }
 .header_image {
   background: #999932;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 15% 80%, 9% 100%, 10% 80%, 0% 75%);
-  padding: 5px 0 20px 15px;
+  padding: 5px 0 25px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 .header_title_text,
 .header_title_text:hover {
@@ -47,6 +70,8 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 32px;
+  line-height: 32px;
+  margin-right: 10px;
 }
 /* Responsive */
 @media (min-width: 600px) {
@@ -58,6 +83,15 @@ body {
   .main {
     padding: 12px;
   }
+}
+
+.menu {
+  color: white;
+  margin-left: 5px;
+}
+.menu:hover {
+  text-decoration: none;
+  color: lightgray;
 }
 
 .page_title {
