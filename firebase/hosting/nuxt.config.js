@@ -14,6 +14,7 @@ module.exports = {
       { property: "og:image", content: (process.env.BASE_URL || "http://localhost:3000") + "/icon-512x512.png" },
       { property: "og:site_name", content: "kik4" },
       { property: "og:description", content: "kik4's page" },
+      { name: "twitter:card", content: "summary" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
