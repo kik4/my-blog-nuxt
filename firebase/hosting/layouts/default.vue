@@ -7,8 +7,8 @@
           class="header_title_text">kik4</nuxt-link>
         <div>
           <template v-if="$nuxt.$route.name !== 'blog'">
-            <nuxt-link 
-              to="/blog" 
+            <nuxt-link
+              to="/blog"
               class="menu">blog</nuxt-link>
           </template>
           <template v-else>
@@ -27,11 +27,7 @@
 </template>
 
 <script>
-export default {
-  created() {
-    console.log(this.$nuxt.$route)
-  },
-}
+export default {}
 </script>
 
 <style>
