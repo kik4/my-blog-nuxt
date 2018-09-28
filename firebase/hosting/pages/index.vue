@@ -147,8 +147,9 @@
 <script>
 export default {
   head: {
-    titleTemplate: "kik4"
-  }
+    titleTemplate: "kik4",
+    meta: [{ property: "og:title", content: "top" }],
+  },
 }
 </script>
 

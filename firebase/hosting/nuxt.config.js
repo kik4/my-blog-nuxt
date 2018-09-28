@@ -9,6 +9,11 @@ module.exports = {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "kik4's page: The engineer's portfolio, blog and others." },
+      { property: "og:title", content: "kik4" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "/icon-512x512.png" },
+      { property: "og:site_name", content: "kik4" },
+      { property: "og:description", content: "kik4's page" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -46,4 +51,7 @@ module.exports = {
     fallback: true,
   },
   plugins: [{ src: "~plugins/ga.js", ssr: false }],
+  env: {
+    baseUrl: process.env.NODE_ENV === "production" ? "https://kik4.work" : "http://localhost:3000",
+  },
 }

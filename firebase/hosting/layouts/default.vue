@@ -27,7 +27,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      meta: [{ property: "og:url", content: process.env.baseUrl + this.$route.fullPath }],
+    }
+  },
+}
 </script>
 
 <style>
