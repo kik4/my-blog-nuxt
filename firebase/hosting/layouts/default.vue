@@ -30,8 +30,17 @@
 export default {
   head() {
     return {
-      meta: [{ property: "og:url", content: process.env.baseUrl + this.$route.fullPath }],
+      meta: [{ hid: "og:url", property: "og:url", content: this.url() }],
     }
+  },
+  methods: {
+    url() {
+      let url = process.env.baseUrl + this.$route.fullPath
+      if (url.slice(-1) === "/") {
+        url = url.slice(0, -1)
+      }
+      return url
+    },
   },
 }
 </script>
