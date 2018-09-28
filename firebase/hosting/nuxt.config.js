@@ -8,12 +8,15 @@ module.exports = {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "kik4's page" }
+      { hid: "description", name: "description", content: "kik4's page" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;subset=japanese", rel: "stylesheet" }
-    ]
+      { rel: "icon", size: "192x192", href: "/icon-192x192.png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/manifest.json" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;subset=japanese" },
+    ],
   },
   /*
   ** Customize the progress bar color
@@ -32,15 +35,15 @@ module.exports = {
           enforce: "pre",
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
-    }
+    },
   },
   //
   css: ["@/assets/css/reboot.css"],
   generate: {
-    fallback: true
+    fallback: true,
   },
-  plugins: [{ src: "~plugins/ga.js", ssr: false }]
+  plugins: [{ src: "~plugins/ga.js", ssr: false }],
 }
