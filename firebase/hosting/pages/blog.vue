@@ -20,9 +20,11 @@
 import axios from "axios"
 
 export default {
-  head: {
-    title: "blog",
-    meta: [{ property: "og:title", content: "blog | kik4" }],
+  head() {
+    return {
+      title: "blog",
+      meta: [{ hid: "og:title", property: "og:title", content: "blog | kik4" }],
+    }
   },
   data: function() {
     return {

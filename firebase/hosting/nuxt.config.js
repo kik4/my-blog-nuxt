@@ -1,3 +1,5 @@
+const baseUrl = process.env.BASE_URL || "http://localhost:3000"
+
 module.exports = {
   /*
   ** Headers of the page
@@ -9,11 +11,11 @@ module.exports = {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "kik4's page: The engineer's portfolio, blog and others." },
-      { property: "og:title", content: "kik4" },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: (process.env.BASE_URL || "http://localhost:3000") + "/icon-512x512.png" },
-      { property: "og:site_name", content: "kik4" },
-      { property: "og:description", content: "kik4" },
+      { hid: "og:title", property: "og:title", content: "kik4" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      { hid: "og:image", property: "og:image", content: baseUrl + "/icon-512x512.png" },
+      { hid: "og:site_name", property: "og:site_name", content: "kik4" },
+      { hid: "og:description", property: "og:description", content: "kik4" },
       { name: "twitter:card", content: "summary" },
     ],
     link: [
@@ -53,6 +55,6 @@ module.exports = {
   },
   plugins: [{ src: "~plugins/ga.js", ssr: false }],
   env: {
-    baseUrl: process.env.BASE_URL || "http://localhost:3000",
+    baseUrl: baseUrl,
   },
 }

@@ -146,8 +146,11 @@
 
 <script>
 export default {
-  head: {
-    titleTemplate: "kik4",
+  head() {
+    return {
+      titleTemplate: "kik4",
+      meta: [{ hid: "og:title", property: "og:title", content: "kik4" }],
+    }
   },
 }
 </script>
