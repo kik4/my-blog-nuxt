@@ -2,8 +2,8 @@
   <div class="container">
     <h1 class="page_title">Blog</h1>
     <template v-if="items!==null">
-      <div 
-        v-for="item in items" 
+      <div
+        v-for="item in items"
         :key="item.id"
         class="article">
         <div class="date">{{ jdate(item.created_at) }} Qiita</div>
@@ -22,6 +22,7 @@ import axios from "axios"
 export default {
   head: {
     title: "blog",
+    meta: [{ property: "og:title", content: "blog | kik4" }],
   },
   data: function() {
     return {
