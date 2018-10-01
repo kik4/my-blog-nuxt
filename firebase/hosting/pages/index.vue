@@ -62,7 +62,9 @@
         <ul>
           <li>
             担当工程
-            <TagList :list="['要件定義', '設計', '実装', 'テスト', '運用/保守']" />
+            <ul>
+              <li><TagList :list="['要件定義', '設計', '実装', 'テスト', '運用/保守']" /></li>
+            </ul>
           </li>
           <li>
             概要
@@ -78,7 +80,9 @@
         <ul>
           <li>
             担当工程
-            <TagList :list="['実装', 'テスト', '運用/保守', 'デザイン']" />
+            <ul>
+              <li><TagList :list="['実装', 'テスト', '運用/保守', 'デザイン']" /></li>
+            </ul>
           </li>
           <li>
             概要
@@ -97,7 +101,9 @@
         <ul>
           <li>
             技術
-            <TagList :list="['nuxt.js', 'Firebase Hosting', 'CircleCI', 'Github']" />
+            <ul>
+              <li><TagList :list="['nuxt.js', 'Firebase Hosting', 'CircleCI', 'Github']" /></li>
+            </ul>
           </li>
           <li>
             詳細
