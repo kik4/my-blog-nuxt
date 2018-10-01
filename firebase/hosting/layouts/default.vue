@@ -5,14 +5,14 @@
         <nuxt-link
           to="/"
           class="header_title_text">kik4</nuxt-link>
-        <div>
+        <div class="menu">
           <template v-if="$nuxt.$route.name !== 'blog'">
             <nuxt-link
               to="/blog"
-              class="menu">blog</nuxt-link>
+              class="menu_a">blog</nuxt-link>
           </template>
           <template v-else>
-            <span class="menu">blog</span>
+            <span class="menu_s">blog</span>
           </template>
         </div>
       </div>
@@ -96,13 +96,17 @@ body {
   }
 }
 
-.menu {
-  color: white;
+.menu > * {
   margin-left: 5px;
 }
-.menu:hover {
-  text-decoration: none;
+.menu_a {
+  color: white;
+}
+.menu_a:hover {
   color: lightgray;
+}
+.menu_s {
+  color: #5b5b20;
 }
 
 .page_title {

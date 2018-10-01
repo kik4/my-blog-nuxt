@@ -56,6 +56,12 @@
     <div>
       <h2>活動</h2>
       <ul class="no_list_dot">
+        <li><nuxt-link to="/blog">記事一覧</nuxt-link></li>
+      </ul>
+    </div>
+    <div>
+      <h2>外部リンク</h2>
+      <ul class="no_list_dot">
         <li><a href="https://twitter.com/_kik4_">Twitter (@_kik4_)</a></li>
         <li><a href="https://qiita.com/kik4">Qiita</a></li>
         <li><a href="https://github.com/kik4">Github</a></li>
@@ -159,6 +165,7 @@ export default {
 h2 {
   font-size: 1.3rem;
   padding-top: 3px;
+  font-weight: bold;
 }
 
 .profile_list dl {
