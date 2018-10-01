@@ -24,6 +24,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
+  margin: 0;
 }
 .tags > li {
   list-style: none;
