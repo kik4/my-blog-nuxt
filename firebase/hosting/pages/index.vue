@@ -26,9 +26,7 @@
           <dl>
             <dt>エディタ</dt>
             <dd>
-              <ul class="tags no_list_padding">
-                <li>Visual Studio Code</li>
-              </ul>
+              <TagList :list="['Visual Studio Code']" />
             </dd>
           </dl>
         </li>
@@ -36,18 +34,7 @@
           <dl>
             <dt>業務経験技術</dt>
             <dd>
-              <ul class="tags no_list_padding">
-                <li>C#</li>
-                <li>JavaScript/TypeScript</li>
-                <li>ASP.NET Web Forms/MVC</li>
-                <li>Laravel</li>
-                <li>React+Redux</li>
-                <li>Vue.js</li>
-                <li>AWS</li>
-                <li>SQL Server</li>
-                <li>IIS</li>
-                <li>Jenkins</li>
-              </ul>
+              <TagList :list="['C#', 'JavaScript/TypeScript', 'ASP.NET Web Forms/MVC', 'Laravel', 'React+Redux', 'Vue.js', 'AWS', 'SQL Server', 'IIS', 'Jenkins']" />
             </dd>
           </dl>
         </li>
@@ -75,13 +62,7 @@
         <ul>
           <li>
             担当工程
-            <ul class="tags">
-              <li>要件定義</li>
-              <li>設計</li>
-              <li>実装</li>
-              <li>テスト</li>
-              <li>運用/保守</li>
-            </ul>
+            <TagList :list="['要件定義', '設計', '実装', 'テスト', '運用/保守']" />
           </li>
           <li>
             概要
@@ -97,12 +78,7 @@
         <ul>
           <li>
             担当工程
-            <ul class="tags">
-              <li>実装</li>
-              <li>テスト</li>
-              <li>運用/保守</li>
-              <li>デザイン</li>
-            </ul>
+            <TagList :list="['実装', 'テスト', '運用/保守', 'デザイン']" />
           </li>
           <li>
             概要
@@ -121,12 +97,7 @@
         <ul>
           <li>
             技術
-            <ul class="tags">
-              <li>nuxt.js</li>
-              <li>Firebase Hosting</li>
-              <li>CircleCI</li>
-              <li>Github</li>
-            </ul>
+            <TagList :list="['nuxt.js', 'Firebase Hosting', 'CircleCI', 'Github']" />
           </li>
           <li>
             詳細
@@ -151,7 +122,9 @@
 </template>
 
 <script>
+import TagList from "@/components/TagList.vue"
 export default {
+  components: { TagList },
   head() {
     return {
       titleTemplate: "kik4",
@@ -190,29 +163,12 @@ ul {
     padding-left: 20px;
   }
 }
-.no_list_padding {
-  padding: 0;
-}
 
 .portfolio_list li {
   font-weight: normal;
 }
 .portfolio_list > li {
   font-weight: bold;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-}
-.tags > li {
-  list-style: none;
-  margin-right: 2px;
-  white-space: nowrap;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  padding: 0 5px;
-  background-color: #fff9f9f9;
 }
 </style>
 
