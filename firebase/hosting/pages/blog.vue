@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 h2 {
   font-size: 1.3rem;
   font-weight: normal;

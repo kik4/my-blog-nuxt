@@ -117,7 +117,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 h2 {
   font-size: 1.3rem;
   padding-top: 3px;
