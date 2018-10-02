@@ -22,7 +22,11 @@
         </InlineInfoBox>
         <InlineInfoBox>
           <InfoTitle>業務経験技術</InfoTitle>
-          <InfoBody><TagList :list="['C#', 'JavaScript/TypeScript', 'ASP.NET Web Forms/MVC', 'Laravel', 'React+Redux', 'Vue.js', 'AWS', 'SQL Server', 'IIS', 'Jenkins']" /></InfoBody>
+          <InfoBody><TagList :list="['C#', 'JavaScript/TypeScript', 'ASP.NET Web Forms/MVC', 'PHP', 'Laravel', 'React+Redux', 'Vue.js', 'AWS', 'SQL Server', 'IIS', 'Jenkins']" /></InfoBody>
+        </InlineInfoBox>
+        <InlineInfoBox>
+          <InfoTitle>プライベートで使う技術</InfoTitle>
+          <InfoBody><TagList :list="['Go', 'GCP', 'DDD', 'PWA', 'SPA', 'サーバレス']" /></InfoBody>
         </InlineInfoBox>
       </IndentBox>
     </div>
@@ -50,10 +54,14 @@
           <IndentBox>
             <TagList :list="['要件定義', '設計', '実装', 'テスト', '運用/保守']" />
           </IndentBox>
+          <InfoBody>技術</InfoBody>
+          <IndentBox>
+            <TagList :list="['C#', 'ASP.NET Web Forms/MVC', 'JavaScript', 'React+Redux', 'Vue.js', 'jQuery', 'AWS', 'SQL Server', 'IIS', 'Jenkins', 'GitBucket']" />
+          </IndentBox>
           <InfoBody>概要</InfoBody>
           <IndentBox>
             <InfoBody>自社プロダクト</InfoBody>
-            <InfoBody>新規機能開発やらサーバ構築やらCI構築やらフロントエンドライブラリ技術選定・導入やらDB設計やら提案・実施。</InfoBody>
+            <InfoBody>フルスタックで何でも担当。フロントエンド/バックエンド新規機能開発・サーバ構築・CI構築・技術選定・DB設計・ツール作成・コードレビュー。その他に開発効率の改善や開発環境のモダン化を提案・実施。比較的技術寄りの部分を担当。</InfoBody>
           </IndentBox>
         </IndentBox>
       </IndentBox>
@@ -62,7 +70,11 @@
         <IndentBox>
           <InfoBody>担当工程</InfoBody>
           <IndentBox>
-            <TagList :list="['実装', 'テスト', '運用/保守', 'デザイン']" />
+            <TagList :list="['設計', '実装', 'テスト', '運用/保守', 'デザイン']" />
+          </IndentBox>
+          <InfoBody>技術</InfoBody>
+          <IndentBox>
+            <TagList :list="['PHP', 'Laravel', 'JavaScript', 'React', 'jQuery', 'Apache', 'nginx', 'MariaDB', 'BootStrap', 'BitBucket']" />
           </IndentBox>
           <InfoBody>概要</InfoBody>
           <IndentBox>
