@@ -57,7 +57,7 @@ module.exports = {
   env: {
     baseUrl: baseUrl,
   },
-  modules: [["@nuxtjs/sitemap"]],
+  modules: [["@nuxtjs/sitemap"], ["@nuxtjs/axios"]],
   sitemap: {
     path: "/sitemap.xml",
     hostname: baseUrl,

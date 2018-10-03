@@ -20,30 +20,19 @@
 import axios from "axios"
 
 export default {
+  async fetch({ store, params }) {
+    await store.dispatch("blog/getArticles")
+  },
   head() {
     return {
       title: "blog",
       meta: [{ hid: "og:title", property: "og:title", content: "blog | kik4" }],
     }
   },
-  data: function() {
-    return {
-      items: [],
-    }
-  },
-  created() {
-    axios
-      .get("https://qiita.com/api/v2/users/kik4/items")
-      .then(
-        function(response) {
-          this.items = response.data
-        }.bind(this),
-      )
-      .catch(
-        function() {
-          this.items = null
-        }.bind(this),
-      )
+  computed: {
+    items() {
+      return this.$store.state.blog.articles
+    },
   },
   methods: {
     jdate(date) {
