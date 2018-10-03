@@ -57,4 +57,10 @@ module.exports = {
   env: {
     baseUrl: baseUrl,
   },
+  modules: [["@nuxtjs/sitemap"]],
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: baseUrl,
+    generate: true,
+  },
 }
