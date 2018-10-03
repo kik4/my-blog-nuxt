@@ -113,13 +113,7 @@
 </template>
 
 <script>
-import TagList from "@/components/TagList.vue"
-import IndentBox from "@/components/IndentBox.vue"
-import InfoBody from "@/components/InfoBody.vue"
-import InfoTitle from "@/components/InfoTitle.vue"
-import InlineInfoBox from "@/components/InlineInfoBox.vue"
 export default {
-  components: { TagList, IndentBox, InfoBody, InfoTitle, InlineInfoBox },
   head() {
     return {
       titleTemplate: "kik4",

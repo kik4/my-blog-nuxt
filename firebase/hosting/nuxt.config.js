@@ -53,7 +53,7 @@ module.exports = {
   generate: {
     fallback: true,
   },
-  plugins: [{ src: "~plugins/ga.js", ssr: false }],
+  plugins: [{ src: "~plugins/global.js" }, { src: "~plugins/ga.js", ssr: false }],
   env: {
     baseUrl: baseUrl,
   },
