@@ -21,7 +21,7 @@
           <InfoBody><TagList :list="['Visual Studio Code']" /></InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
-          <InfoTitle>業務経験技術</InfoTitle>
+          <InfoTitle>主な業務経験技術</InfoTitle>
           <InfoBody><TagList :list="['C#', 'JavaScript/TypeScript', 'ASP.NET Web Forms/MVC', 'PHP', 'Laravel', 'React+Redux', 'Vue.js', 'AWS', 'SQL Server', 'IIS', 'Jenkins']" /></InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
