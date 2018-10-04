@@ -1,16 +1,13 @@
 <template>
-  <div class="indent">
+  <div class="indent_box">
     <slot/>
   </div>
 </template>
 
 <style scoped>
-.indent {
+.indent_box {
   padding-left: 12px;
-}
-@media (min-width: 600px) {
-  ul {
-    padding-left: 20px;
-  }
+  margin-top: 3px;
+  margin-bottom: 6.25px;
 }
 </style>
