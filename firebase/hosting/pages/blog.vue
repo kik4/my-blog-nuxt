@@ -22,7 +22,7 @@ import axios from "axios"
 export default {
   async fetch({ store, params }) {
     // check cache
-    if (store.state.blog.articles) {
+    if (store.state.blog.articles.length) {
       return
     }
     await store.dispatch("blog/getArticles")
