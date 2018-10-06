@@ -1,4 +1,7 @@
+require("dotenv").config()
+
 const baseUrl = process.env.BASE_URL || "http://localhost:3000"
+const gaeUrl = process.env.GAE_URL || "http://localhost:8080"
 
 module.exports = {
   /*
@@ -55,7 +58,8 @@ module.exports = {
   },
   plugins: [{ src: "~plugins/global.js" }, { src: "~plugins/ga.js", ssr: false }],
   env: {
-    baseUrl: baseUrl,
+    BASE_URL: baseUrl,
+    GAE_URL: gaeUrl,
   },
   modules: [["@nuxtjs/sitemap"], ["@nuxtjs/axios"]],
   sitemap: {

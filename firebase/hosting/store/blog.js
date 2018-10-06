@@ -10,9 +10,9 @@ export const mutations = {
 
 export const actions = {
   async getArticles({ commit }) {
-    const data = await this.$axios.$get("https://qiita.com/api/v2/users/kik4/items", { timeout: 5000 }).catch(() => {})
+    const data = await this.$axios.$get(process.env.GAE_URL + "/qiita/items", { timeout: 5000 }).catch(() => {})
     if (data) {
-      commit("setArticles", data)
+      commit("setArticles", data.Value)
     } else {
       commit("setArticles", null)
     }

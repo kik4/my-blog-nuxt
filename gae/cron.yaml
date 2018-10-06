@@ -1,0 +1,4 @@
+cron:
+  - description: "daily summary job"
+    url: /qiita/items/request
+    schedule: every 1 hours

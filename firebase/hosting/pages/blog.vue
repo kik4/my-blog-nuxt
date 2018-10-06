@@ -1,7 +1,7 @@
 ﻿<template>
   <div class="container">
     <h1 class="page_title">Blog</h1>
-    <template v-if="items!==null">
+    <template v-if="items">
       <div
         v-for="item in items"
         :key="item.id"
