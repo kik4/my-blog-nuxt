@@ -55,6 +55,7 @@ jobs:
       - run:
           working_directory: gae
           command: |
+            go get ./...
             echo $GAE_SERVICE_ACCOUNT_KEY > /tmp/secret.json
             gcloud auth activate-service-account --key-file /tmp/secret.json
             gcloud config set project ${GAE_PROJECT_ID}
