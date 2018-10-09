@@ -58,3 +58,10 @@ jobs:
             echo $GAE_SERVICE_ACCOUNT_KEY > /tmp/secret.json
             gcloud auth activate-service-account $GAE_SERVICE_ACCOUNT_CLIENT_EMAIL --key-file /tmp/secret.json
             gcloud app deploy app.yaml cron.yaml
+
+workflows:
+  version: 2
+  build-and-push:
+    jobs:
+      - build
+      - build_go
