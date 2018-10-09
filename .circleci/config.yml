@@ -56,7 +56,7 @@ jobs:
           working_directory: gae
           command: |
             echo $GAE_SERVICE_ACCOUNT_KEY > /tmp/secret.json
-            gcloud auth activate-service-account $GAE_SERVICE_ACCOUNT_CLIENT_EMAIL --key-file /tmp/secret.json
+            gcloud auth activate-service-account --key-file /tmp/secret.json
             gcloud app deploy app.yaml cron.yaml
 
 workflows:
