@@ -49,7 +49,7 @@ jobs:
   build_go:
     docker:
       - image: mercari/appengine-go
-    working_directory: ~/repo
+    working_directory: /go/src/github.com/kik4/my-portfolio-nuxt/
     steps:
       - checkout
       - run:
