@@ -79,7 +79,7 @@
           <InfoBody>概要</InfoBody>
           <IndentBox>
             <InfoBody>自社プロダクト</InfoBody>
-            <InfoBody>主に新規機能開発やバグ修正。一部デザインも担当。</InfoBody>
+            <InfoBody>主に新規機能開発やバグ修正。一部デザインも担当。その他、vagrantを用いた環境構築など。</InfoBody>
           </IndentBox>
         </IndentBox>
       </IndentBox>
