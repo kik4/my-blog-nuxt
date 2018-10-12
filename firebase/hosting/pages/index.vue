@@ -91,7 +91,7 @@
         <IndentBox>
           <InfoBody>技術</InfoBody>
           <IndentBox>
-            <TagList :list="['nuxt.js', 'Firebase Hosting', 'CircleCI', 'Github']" />
+            <TagList :list="['nuxt.js', 'Firebase Hosting', 'CircleCI', 'Github', 'Go', 'GAE', 'Cloud DataStore']" />
           </IndentBox>
           <InfoBody>詳細</InfoBody>
           <IndentBox>
