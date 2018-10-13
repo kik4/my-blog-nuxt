@@ -53,7 +53,7 @@ jobs:
     steps:
       - checkout
       - run:
-          working_directory: gae
+          working_directory: gae/app
           command: |
             go get ./...
             echo $GAE_SERVICE_ACCOUNT_KEY > /tmp/secret.json
