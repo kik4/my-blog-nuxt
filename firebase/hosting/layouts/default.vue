@@ -5,16 +5,7 @@
         <nuxt-link
           to="/"
           class="header_title_text">kik4</nuxt-link>
-        <div class="menu">
-          <template v-if="$nuxt.$route.name !== 'blog'">
-            <nuxt-link
-              to="/blog"
-              class="menu_a">blog</nuxt-link>
-          </template>
-          <template v-else>
-            <span class="menu_s">blog</span>
-          </template>
-        </div>
+        <InternalHeaderMenu path="articles" />
       </div>
     </section>
     <section class="main">
@@ -94,19 +85,6 @@ body {
   .main {
     padding: 12px;
   }
-}
-
-.menu > * {
-  margin-left: 5px;
-}
-.menu_a {
-  color: white;
-}
-.menu_a:hover {
-  color: lightgray;
-}
-.menu_s {
-  color: #5b5b20;
 }
 
 .page_title {

@@ -1,6 +1,6 @@
 ﻿<template>
   <div class="container">
-    <h1 class="page_title">Blog</h1>
+    <h1 class="page_title">Articles</h1>
     <template v-if="items">
       <div
         v-for="item in items"
