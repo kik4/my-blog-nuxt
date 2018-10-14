@@ -12,6 +12,7 @@ import (
 	"google.golang.org/appengine/urlfetch"
 )
 
+// RequestQiitaItems is handler request items from qiita
 func RequestQiitaItems(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/qiita/items/request" {
 		http.NotFound(w, r)

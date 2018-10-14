@@ -9,6 +9,7 @@ import (
 	"google.golang.org/appengine/datastore"
 )
 
+// ResponseQiitaItems is handler response qiita items
 func ResponseQiitaItems(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/qiita/items" {
 		http.NotFound(w, r)
