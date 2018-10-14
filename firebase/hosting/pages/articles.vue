@@ -6,8 +6,9 @@
         v-for="item in items"
         :key="item.id"
         class="article">
-        <div class="date">{{ jdate(item.created_at) }} Qiita</div>
+        <div class="date">{{ jdate(item.created_at) }} <a href="https://qiita.com/kik4">Qiita</a></div>
         <h2><a :href="item.url">{{ item.title }}</a></h2>
+        <div class="body">{{ item.body.substring(0, 100) }}...</div>
       </div>
     </template>
     <template v-else>
@@ -41,7 +42,12 @@ export default {
   methods: {
     jdate(date) {
       var date = new Date(date)
-      return date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate()
+      return (
+        date.getFullYear() + "/" + this.zeroPadding(date.getMonth() + 1, 2) + "/" + this.zeroPadding(date.getDate(), 2)
+      )
+    },
+    zeroPadding(num, length) {
+      return ("000000" + num).slice(-length)
     },
   },
 }
@@ -49,7 +55,7 @@ export default {
 
 <style scoped>
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: normal;
   margin-bottom: 0;
 }
@@ -57,7 +63,11 @@ h2 {
   padding: 5px;
 }
 .date {
+  font-size: 1.1rem;
+}
+.body {
   font-size: 1rem;
+  word-wrap: break-word;
 }
 </style>
 
