@@ -1,13 +1,8 @@
 <template>
   <div class="menu">
-    <template v-if="$nuxt.$route.name !== path">
-      <nuxt-link
-        :to="path"
-        class="menu_a">{{ text }}</nuxt-link>
-    </template>
-    <template v-else>
-      <span class="menu_s">{{ text }}</span>
-    </template>
+    <a
+      :href="path"
+      class="menu_a">{{ text }}</a>
   </div>
 </template>
 
@@ -32,12 +27,9 @@ export default {
   font-weight: bolder;
 }
 .menu_a {
-  color: white;
+  color: rgb(255, 200, 200);
 }
 .menu_a:hover {
-  color: lightgray;
-}
-.menu_s {
-  color: #5b5b20;
+  color: rgb(255, 95, 95);
 }
 </style>

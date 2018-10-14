@@ -31,21 +31,6 @@
       </IndentBox>
     </div>
     <div class="margin_bottom">
-      <h2>活動</h2>
-      <IndentBox>
-        <nuxt-link to="/blog">記事一覧</nuxt-link>
-      </IndentBox>
-    </div>
-    <div class="margin_bottom">
-      <h2>外部リンク</h2>
-      <IndentBox>
-        <InfoBody><a href="https://twitter.com/_kik4_">Twitter (@_kik4_)</a></InfoBody>
-        <InfoBody><a href="https://qiita.com/kik4">Qiita</a></InfoBody>
-        <InfoBody><a href="https://github.com/kik4">Github</a></InfoBody>
-        <InfoBody><a href="https://kik4.hatenablog.com/">ブログ</a></InfoBody>
-      </IndentBox>
-    </div>
-    <div class="margin_bottom">
       <h2>業務経験</h2>
       <IndentBox class="margin_bottom">
         <InfoTitle>ECサイト開発</InfoTitle>

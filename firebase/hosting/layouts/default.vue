@@ -5,7 +5,18 @@
         <nuxt-link
           to="/"
           class="header_title_text">kik4</nuxt-link>
-        <InternalHeaderMenu path="articles" />
+        <InternalHeaderMenu
+          path="articles" 
+          text="Articles"/>
+        <ExternalHeaderMenu 
+          path="https://kik4.hatenablog.com" 
+          text="Blog" />
+        <ExternalHeaderMenu 
+          path="https://twitter.com/_kik4_" 
+          text="Twitter" />
+        <ExternalHeaderMenu 
+          path="https://github.com/kik4" 
+          text="GitHub" />
       </div>
     </section>
     <section class="main">
