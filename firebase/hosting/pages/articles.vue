@@ -56,7 +56,6 @@ export default {
 <style scoped>
 h2 {
   font-size: 1.4rem;
-  font-weight: normal;
   margin-bottom: 0;
 }
 .article {
@@ -64,10 +63,12 @@ h2 {
 }
 .date {
   font-size: 1.1rem;
+  font-weight: bolder;
 }
 .body {
   font-size: 1rem;
   word-wrap: break-word;
+  color: rgb(153, 153, 153);
 }
 </style>
 
