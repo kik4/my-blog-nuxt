@@ -6,16 +6,16 @@
           to="/"
           class="header_title_text">kik4</nuxt-link>
         <InternalHeaderMenu
-          path="articles" 
+          path="articles"
           text="Articles"/>
-        <ExternalHeaderMenu 
-          path="https://kik4.hatenablog.com" 
+        <ExternalHeaderMenu
+          path="https://kik4.hatenablog.com"
           text="Blog" />
-        <ExternalHeaderMenu 
-          path="https://twitter.com/_kik4_" 
+        <ExternalHeaderMenu
+          path="https://twitter.com/_kik4_"
           text="Twitter" />
-        <ExternalHeaderMenu 
-          path="https://github.com/kik4" 
+        <ExternalHeaderMenu
+          path="https://github.com/kik4"
           text="GitHub" />
       </div>
     </section>
@@ -112,4 +112,3 @@ body {
   font-size: 0.8rem;
 }
 </style>
-
