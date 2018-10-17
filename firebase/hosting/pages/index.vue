@@ -46,7 +46,20 @@
           <InfoBody>概要</InfoBody>
           <IndentBox>
             <InfoBody>自社プロダクト</InfoBody>
-            <InfoBody>フルスタックで何でも担当。フロントエンド/バックエンド新規機能開発・サーバ構築・CI構築・技術選定・DB設計・ツール作成・コードレビュー。その他に開発効率の改善や開発環境のモダン化を提案・実施。比較的技術寄りの部分を担当。</InfoBody>
+            <InfoBody>フルスタックで何でも担当。比較的技術寄りの部分を解決。主な作業は以下の通り。</InfoBody>
+            <InfoBody>
+              <ul>
+                <li>フロントエンド/バックエンド新規機能開発</li>
+                <li>AWS EC2サーバ構築</li>
+                <li>CI環境構築</li>
+                <li>React/Vue.jsなどライブラリ技術選定</li>
+                <li>DB設計</li>
+                <li>ツール作成</li>
+                <li>コードレビュー</li>
+                <li>ASP.NET Web FormsからMVCへの順次移行提案・実施</li>
+                <li>CSVデータ出力カスタムDSLの設計・実行システムの実装</li>
+              </ul>
+            </InfoBody>
           </IndentBox>
         </IndentBox>
       </IndentBox>
@@ -118,4 +131,3 @@ h2 {
   margin-bottom: 12.5px;
 }
 </style>
-
