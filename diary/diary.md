@@ -230,19 +230,19 @@ GAE（と Go）を使ったことがあるので手っ取り早いという理�
 
 https://github.com/kik4/my-portfolio-nuxt/commit/9cf1c02806e1eb242d523793b7f9bc80a0e7b1bf
 
-DataStore を使うのは初めてでした。
+DataStore を使うのは初めてでした。json をそのまま格納できなくて、色々調べることに。
 
-- json をそのまま格納できない（配列を基底にできなかった）
+- 配列をエンティティの基底にできない
 - 配列のオブジェクトに配列は入れられない
 - long string を入れるには index を外す
 
-など問題があったのですが、どうにか乗り越えます。
+などの問題をどうにか乗り越えます。
 
 ```
 dev_appserver.py .
 ```
 
-が動かなくてフルパスで app.yaml を指定したりしました。
+が動かなくて.のところはフルパスで app.yaml を指定したりしました。
 
 # GAE の CircleCI 対応
 
@@ -250,7 +250,8 @@ GAE の方のデプロイもいちいちコンソールからやっていられ�
 
 https://github.com/kik4/my-portfolio-nuxt/commit/94b4b36c27ca61de9356e037b97b10c4d8354cf4
 
-上記からも色々修正を重ねました。config.yml だけでなく他にも GCP の方で GAE の Admin の API を有効にしてやったりとか。
+上記からも config.yml に色々修正を重ねました。
+さらに GCP の方で App Engine Admin API(appengine.googleapis.com) を有効にして上げる必要がありました。一度コンソールからやればいけるのかもしれませんが、面倒だったので GCP のコンソールから直接有効化。（Marketplace にありました）
 
 # GAE のコードのパッケージ分け
 
