@@ -6,7 +6,7 @@
       <IndentBox>
         <InlineInfoBox>
           <InfoTitle>名前</InfoTitle>
-          <InfoBody>kik4</InfoBody>
+          <InfoBody>kik4（きっくふぉー）[kíkfˈɔː]</InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
           <InfoTitle>職業</InfoTitle>
