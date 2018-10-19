@@ -39,7 +39,7 @@ export default {
       return this.$store.state.blog.articles
     },
   },
-  async mounted() {
+  async created() {
     if (store.state.blog.articles.length > 0) {
       return
     }
