@@ -39,11 +39,11 @@ export default {
       return this.$store.state.blog.articles
     },
   },
-  // async mounted() {
-  //   if (process.server) {
-  //     await store.dispatch("blog/getArticles")
-  //   }
-  // },
+  async mounted() {
+    if (process.server) {
+      await store.dispatch("blog/getArticles")
+    }
+  },
   head() {
     return {
       title: "blog",
