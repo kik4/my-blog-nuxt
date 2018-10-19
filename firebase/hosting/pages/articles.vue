@@ -29,7 +29,7 @@ export default {
       return
     }
     // check cache
-    if (store.state.blog.articles) {
+    if (store.state.blog.articles.length > 0) {
       return
     }
     await store.dispatch("blog/getArticles")
