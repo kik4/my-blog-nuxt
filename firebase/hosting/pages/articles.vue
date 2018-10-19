@@ -22,22 +22,30 @@ import axios from "axios"
 
 export default {
   async fetch({ store, params }) {
+    if (process.ssr) {
+      return
+    }
     // check cache
     if (store.state.blog.articles) {
       return
     }
     await store.dispatch("blog/getArticles")
   },
+  computed: {
+    items() {
+      return this.$store.state.blog.articles
+    },
+  },
+  // async mounted() {
+  //   if (process.ssr) {
+  //     await store.dispatch("blog/getArticles")
+  //   }
+  // },
   head() {
     return {
       title: "blog",
       meta: [{ hid: "og:title", property: "og:title", content: "blog | kik4" }],
     }
-  },
-  computed: {
-    items() {
-      return this.$store.state.blog.articles
-    },
   },
   methods: {
     jdate(date) {
