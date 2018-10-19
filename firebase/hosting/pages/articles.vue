@@ -39,12 +39,11 @@ export default {
       return this.$store.state.blog.articles
     },
   },
-  mounted() {
-    if (process.server) {
-      this.$nextTick(async function() {
-        await store.dispatch("blog/getArticles")
-      })
+  async mounted() {
+    if (store.state.blog.articles.length > 0) {
+      return
     }
+    await store.dispatch("blog/getArticles")
   },
   head() {
     return {
