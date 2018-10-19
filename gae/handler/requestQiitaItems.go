@@ -21,7 +21,7 @@ func RequestQiitaItems(w http.ResponseWriter, r *http.Request) {
 
 	ctx := appengine.NewContext(r)
 	client := urlfetch.Client(ctx)
-	resp, err := client.Get("https://qiita.com/api/v2/users/kik4/items")
+	resp, err := client.Get("https://qiita.com/api/v2/users/kik4/items?per_page=100")
 	if err != nil || resp.StatusCode != http.StatusOK {
 		InternalServerError(ctx, w, err)
 		return
