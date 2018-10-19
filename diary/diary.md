@@ -1,10 +1,8 @@
-title: Nuxt.js でポートフォリオサイトを作成した記録
-
 # 端書
 
 これは Nuxt.js を使ってポートフォリオサイトを作ったのを GitHub の履歴を見返しながらメモ的に書き起こしたものです。
 割と詳細を忘れていてきちんと作業日誌付けておけばよかったと後悔…。とはいえ詰まった部分をかなり思い出したのでこれを読んだ方が同じ轍を踏まない＆アドバイスをいただければ幸いです。
-ちなみにスキルは React/Redux と Vue.js で業務経験あり。Nuxt.js や Firebase は初めてという具合です。
+ちなみにスキルは React/Redux と Vue.js で経験あり。Nuxt.js や Firebase は初めてという具合です。
 
 # モチベーション
 
@@ -56,7 +54,7 @@ http://localhost:3000 にアクセスして動作確認しました。
 
 # 開発ツールの準備
 
-[ESLint と Prettier](https://ja.nuxtjs.org/guide/development-tools/#eslint)の導入の仕方が書いてあったので実施。準備ばかりですが、開発のしやすさの向上は何より重要です。
+[ESLint と Prettier](https://ja.nuxtjs.org/guide/development-tools/#eslint-%E3%81%A8-prettier)の導入の仕方が書いてあったので実施。
 
 ```bash
 yarn add babel-eslint eslint eslint-config-prettier eslint-loader eslint-plugin-vue eslint-plugin-prettier prettier
@@ -137,25 +135,22 @@ nuxt.config.json もおすすめ通りに設定を追加。
 # 紆余曲折
 
 9/19 - 24。
-firebase function を導入しようとして一旦やめたり、テンプレートをいじったり、とりあえずボタンを押したら数字が増えるページを作ったりしていました。a タグで他のページへのリンク書いたら普通に画面遷移して、nuxt-link 使わなきゃ SPA にならないじゃんとかなったり。
+firebase function を導入しようとして一旦やめたり、テンプレートをいじったり、とりあえず[ボタンを押したら数字が増えるページ](https://github.com/kik4/my-portfolio-nuxt/blob/f2eda33fa858ee38cf79ac630eaf4018d37266fa/pages/index.vue)を作ったりしていました。a タグで他のページへのリンク書いたら普通に画面遷移して、nuxt-link 使わなきゃ SPA にならないじゃんとかなったり。
 
 # Firebase Hosting にホスト
 
 [ガイド](https://ja.nuxtjs.org/guide/routing/#firebase-%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E5%90%91%E3%81%91%E3%81%AE%E5%AE%9F%E8%A3%85)があるのでその通りにしました。
+Hosting なので静的ファイルを置くだけです。なので`yarn generate`を使って資材を作成します。
 404 ページ用に layouts/error.vue も追加。色々試行錯誤しつつ、デプロイまで達成。
-
-```bash
-yarn add firebase
-firebase deploy
-```
+デプロイ方法は[こちら](https://firebase.google.com/docs/hosting/deploying?hl=ja)。
 
 # CircleCI の導入
 
 9/25。いちいち手作業でデプロイなんてやっていられなくて、GitHub にプッシュしたら自動でデプロイまで行ってほしいわけです。
 node のバージョンが足りないとかコマンド足りないとか環境変数とか試行錯誤。
-使い方はいくらでも出てくるのではしょりますがこの時点ではこれで落ち着きました。
+node のビルドに firebase へのデプロイを追加しただけで、以下の通りになりました。
 
-https://github.com/kik4/my-portfolio-nuxt/commit/3387f30b53d318f6ccb573d06d077ec7fa536d66
+https://github.com/kik4/my-portfolio-nuxt/blob/3387f30b53d318f6ccb573d06d077ec7fa536d66/.circleci/config.yml
 
 この時点で数時間しか触っていない牛歩具合。
 
@@ -174,7 +169,7 @@ SSL 対応は Firebase なのでこの時点で完了。便利ですね。
 9/28。
 blog という名前ですが、Qiita の記事を Qiita API で取得して一覧表示させるようにしました。
 使用する API は[こちら](https://qiita.com/api/v2/docs#get-apiv2usersuser_iditems)。
-ページを開く度に axios で取得します。Qiita API にはレート制限があって「認証していない状態では IP アドレスごとに 1 時間に 60 回まで」なので、実はこれだと割と簡単に上限に達してしまいます。ここの改善は後々。
+ページを開く度に axios モジュールで取得します。Qiita API にはレート制限があって「認証していない状態では IP アドレスごとに 1 時間に 60 回まで」なので、実はこれだと割と簡単に上限に達してしまいます。ここの改善は後々。
 
 https://github.com/kik4/my-portfolio-nuxt/commit/902d1e5d7db6fb9412459f3fcd712e43cf92e212
 
@@ -247,10 +242,12 @@ dev_appserver.py .
 # GAE の CircleCI 対応
 
 GAE の方のデプロイもいちいちコンソールからやっていられないので CircleCI に任せます。
+参考は[こちら](https://medium.com/@timakin/gae-go%E3%82%92circleci2-0%E7%B5%8C%E7%94%B1%E3%81%A7deploy-5af054c7d4af)。ありがたいですね。
+GCP でサービスアカウントの発行。環境変数`DEV_SERVICE_ACCOUNT_CLIENT_EMAIL`と`DEV_SERVICE_ACCOUNT_KEY`の追加。circle.yml は参考にしつつ自作です。
 
-https://github.com/kik4/my-portfolio-nuxt/commit/94b4b36c27ca61de9356e037b97b10c4d8354cf4
+https://github.com/kik4/my-portfolio-nuxt/blob/4161ab94fa9d43df9a39d0ebe90b1fc614974785/.circleci/config.yml
 
-上記からも config.yml に色々修正を重ねました。
+go 用の job を追加し、job が二つあるので workflows を追記しました。
 さらに GCP の方で App Engine Admin API(appengine.googleapis.com) を有効にして上げる必要がありました。一度コンソールからやればいけるのかもしれませんが、面倒だったので GCP のコンソールから直接有効化。（Marketplace にありました）
 
 # GAE のコードのパッケージ分け
@@ -262,8 +259,22 @@ GOPATH の中で作業していなかったので物理フォルダを移動さ�
 
 blog ページを articles ページに変更したり、コンテンツを整理しました。
 
+# Qiita の記事が 20 件 までしか出ない
+
+使用している Qiita API の`/api/v2/users/:user_id/items`は 20 件までしか返してくれませんでした。
+ページング機能があるので使うのが正道かと思ったんですが、per_page あげれば 100 件までは一発で取れるので今はそれで済ませてしまいました。
+
 # 終わりに
 
 まだまだ開発を続けていきますが、ここまでで一旦は形になりました。
-途中 PWA にしようとして思った通りに動かないので諦めました。次のステップはこれかもしれません。
-ここまで色々ありましたが、終わってみれば爆裂に簡単に作れたので Nuxt.js 便利ですね！
+途中 PWA にしようとして思った通りに動かないので中止。でもいつかやりたいです。
+コード書くより中身を充実させたりスタイル考える方が手間だったり…。
+終わってみれば爆裂に簡単に作れたので Nuxt.js はとても便利ですね。
+
+# 課題
+
+- \$nuxt.\$route.name を取得した場合、通常はページ名が取れるが generate した場合は index になってしまう
+- fetch メソッドは generate した場合に動かない（作成したページにデータがすでに入っている）
+  - fetch があるページに直接アクセスした場合は generate 時に取得したデータが、ページ遷移時は fetch したデータで表示されるため差異が出てしまう
+
+解決方法があればお教えください…。
