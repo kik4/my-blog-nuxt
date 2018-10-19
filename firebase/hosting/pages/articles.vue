@@ -25,9 +25,6 @@ import axios from "axios"
 
 export default {
   async fetch({ store, params }) {
-    if (process.server) {
-      return
-    }
     // check cache
     if (store.state.blog.articles.length > 0) {
       return
@@ -38,12 +35,6 @@ export default {
     items() {
       return this.$store.state.blog.articles
     },
-  },
-  async created() {
-    if (store.state.blog.articles.length > 0) {
-      return
-    }
-    await store.dispatch("blog/getArticles")
   },
   head() {
     return {
