@@ -8,17 +8,29 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "kik4's page",
-    titleTemplate: "%s | kik4",
+    title: "kik4.work",
+    titleTemplate: "%s | kik4.work",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "kik4's page: The engineer's portfolio, blog and others." },
-      { hid: "og:title", property: "og:title", content: "kik4" },
+      {
+        hid: "description",
+        name: "description",
+        content: "kik4's page: The engineer's portfolio, blog and others.",
+      },
+      { hid: "og:title", property: "og:title", content: "kik4.work" },
       { hid: "og:type", property: "og:type", content: "website" },
-      { hid: "og:image", property: "og:image", content: baseUrl + "/icon-512x512.png" },
-      { hid: "og:site_name", property: "og:site_name", content: "kik4" },
-      { hid: "og:description", property: "og:description", content: "kik4" },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: baseUrl + "/icon-512x512.png",
+      },
+      { hid: "og:site_name", property: "og:site_name", content: "kik4.work" },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "kik4's page: The engineer's portfolio, blog and others.",
+      },
       { name: "twitter:card", content: "summary" },
     ],
     link: [
@@ -26,7 +38,10 @@ module.exports = {
       { rel: "icon", size: "192x192", href: "/icon-192x192.png" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.json" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;subset=japanese" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;subset=japanese",
+      },
     ],
   },
   /*

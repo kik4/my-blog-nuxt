@@ -114,8 +114,8 @@
 export default {
   head() {
     return {
-      titleTemplate: "kik4",
-      meta: [{ hid: "og:title", property: "og:title", content: "kik4" }],
+      titleTemplate: "kik4.work",
+      meta: [{ hid: "og:title", property: "og:title", content: "kik4.work" }],
     }
   },
 }
