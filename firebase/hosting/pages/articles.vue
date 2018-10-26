@@ -1,7 +1,7 @@
 ﻿<template>
   <div class="container">
     <h1 class="page_title">Articles</h1>
-    <template v-if="items.length > 0">
+    <template v-if="items && items.length > 0">
       <div
         v-for="item in items"
         :key="item.id"
@@ -11,7 +11,7 @@
         <div class="body">{{ item.body.substring(0, 100) }}...</div>
       </div>
     </template>
-    <template v-else-if="items.length === 0">
+    <template v-else-if="items && items.length === 0">
       <div>取得中...</div>
     </template>
     <template v-else>
@@ -26,7 +26,7 @@ import axios from "axios"
 export default {
   async fetch({ store, params }) {
     // check cache
-    if (store.state.blog.articles.length > 0) {
+    if (store.state.blog.articles && store.state.blog.articles.length > 0) {
       return
     }
     await store.dispatch("blog/getArticles")
