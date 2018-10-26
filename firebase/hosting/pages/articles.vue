@@ -40,6 +40,34 @@ export default {
     return {
       title: "blog",
       meta: [{ hid: "og:title", property: "og:title", content: "blog | kik4" }],
+      __dangerouslyDisableSanitizers: ["script"],
+      script: [
+        {
+          hid: "jsonld",
+          innerHTML: `{
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "${this.base_url()}",
+                  "name": "kik4.work"
+                }
+              }, {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "${this.url()}",
+                  "name": "Articles"
+                }
+              }
+            ]
+          }`,
+          type: "application/ld+json",
+        },
+      ],
     }
   },
   methods: {

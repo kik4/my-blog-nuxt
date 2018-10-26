@@ -116,6 +116,13 @@ export default {
     return {
       titleTemplate: "kik4.work",
       meta: [{ hid: "og:title", property: "og:title", content: "kik4.work" }],
+      script: [
+        {
+          hid: "jsonld",
+          innerHTML: ``,
+          type: "application/ld+json",
+        },
+      ],
     }
   },
 }
