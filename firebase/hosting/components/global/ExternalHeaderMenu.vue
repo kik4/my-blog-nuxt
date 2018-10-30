@@ -24,7 +24,6 @@ export default {
 <style scoped>
 .menu {
   font-size: 1.2rem;
-  text-decoration: underline;
 }
 .menu > * {
   margin-right: 5px;
