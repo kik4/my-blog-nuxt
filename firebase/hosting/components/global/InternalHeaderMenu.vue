@@ -27,9 +27,13 @@ export default {
 </script>
 
 <style scoped>
+.menu {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
 .menu > * {
-  margin-left: 7px;
-  font-weight: bolder;
+  margin-right: 5px;
+  font-weight: 600;
 }
 .menu_a {
   color: white;

@@ -4,26 +4,45 @@
       <div class="header_image">
         <nuxt-link
           to="/"
-          class="header_title_text">kik4</nuxt-link>
-        <InternalHeaderMenu
-          path="articles"
-          text="Articles"/>
-        <ExternalHeaderMenu
-          path="https://kik4.hatenablog.com"
-          text="Blog" />
-        <ExternalHeaderMenu
-          path="https://twitter.com/_kik4_"
-          text="Twitter" />
-        <ExternalHeaderMenu
-          path="https://github.com/kik4"
-          text="GitHub" />
+          class="header_title_text">kik4.work</nuxt-link>
+        <div class="menu">
+          <InternalHeaderMenu
+            path="articles"
+            text="Articles"/>
+          <ExternalHeaderMenu
+            path="https://kik4.hatenablog.com"
+            text="Blog" />
+          <ExternalHeaderMenu
+            path="https://twitter.com/_kik4_"
+            text="Twitter" />
+          <ExternalHeaderMenu
+            path="https://github.com/kik4"
+            text="GitHub" />
+          <ExternalHeaderMenu
+            path="https://qiita.com/kik4"
+            text="Qiita" />
+        </div>
       </div>
     </section>
     <section class="main">
       <nuxt/>
     </section>
     <section class="footer">
-      ©2018 kik4, All Rights Reserved.
+      <div class="footer_menu">
+        <span>Sitemap :</span>
+        <nuxt-link to="/">TOP</nuxt-link>
+        <nuxt-link to="articles">Articles</nuxt-link>
+      </div>
+      <div class="footer_menu">
+        <span>Link :</span>
+        <a href="https://kik4.hatenablog.com">Blog</a>
+        <a href="https://twitter.com/_kik4_">Twitter</a>
+        <a href="https://github.com/kik4">GitHub</a>
+        <a href="https://qiita.com/kik4">Qiita</a>
+      </div>
+      <div>
+        ©2018 kik4, All Rights Reserved.
+      </div>
     </section>
   </div>
 </template>
@@ -63,26 +82,28 @@ body {
 .header_image {
   background: #999932;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 15% 80%, 9% 100%, 10% 80%, 0% 75%);
-  padding: 5px 0 25px 15px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  padding: 5px 0 30px 15px;
 }
 .header_title_text,
 .header_title_text:hover {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 32px;
-  line-height: 32px;
-  margin-right: 10px;
+  font-size: 2rem;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 /* Responsive */
 @media (min-width: 600px) {
+  html {
+    font-size: 15px;
+  }
   .layout_container {
     width: 80%;
     max-width: 1080px;
-    font-size: 15px;
   }
   .main {
     padding: 12px;
@@ -99,7 +120,18 @@ body {
 .footer {
   background: #999932;
   padding: 15px;
+  color: lightgray;
+  font-size: 0.9rem;
+}
+.footer_menu {
+  margin-bottom: 3px;
+}
+.footer_menu > span {
+  color: wheat;
+  margin-right: 7px;
+}
+.footer_menu > a {
   color: white;
-  font-size: 0.8rem;
+  margin-right: 5px;
 }
 </style>
