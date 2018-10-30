@@ -86,18 +86,18 @@ export default {
 
 <style scoped>
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 .article {
   padding: 5px;
 }
 .date {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   font-weight: bolder;
 }
 .body {
-  font-size: 1rem;
+  font-size: 0.8rem;
   word-wrap: break-word;
   color: rgb(153, 153, 153);
 }

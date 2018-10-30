@@ -81,8 +81,8 @@ body {
 }
 .header_image {
   background: #999932;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 15% 80%, 9% 100%, 10% 80%, 0% 75%);
-  padding: 5px 0 30px 15px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 82%, 15% 90%, 9% 100%, 10% 90%, 0% 82%);
+  padding: 5px 0 25px 15px;
 }
 .header_title_text,
 .header_title_text:hover {
