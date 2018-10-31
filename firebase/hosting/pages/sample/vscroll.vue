@@ -66,7 +66,7 @@ export default {
   height: 200px;
   width: 200px;
   border: black 1px solid;
-  overflow: scroll;
+  overflow: auto;
   position: relative;
 }
 .vscroll_container {
