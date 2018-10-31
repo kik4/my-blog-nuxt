@@ -37,14 +37,14 @@ export default {
   },
   data() {
     return {
-      list: [...Array(100000).keys()],
+      list: [...Array(10000).keys()],
       scrollTop: 0,
       start: 0,
     }
   },
   computed: {
     vlist() {
-      const count = 200 / 50 + 1
+      const count = 200 / 50 + 6
       return this.list.slice(this.start, this.start + count)
     },
   },
@@ -54,7 +54,8 @@ export default {
   methods: {
     handleScroll() {
       this.scrollTop = this.$refs.vscroll.scrollTop
-      this.start = Math.floor(this.scrollTop / 50)
+      const tmpstart = Math.floor(this.scrollTop / 50)
+      this.start = tmpstart - 3 > 0 ? tmpstart - 3 : 0
     },
   },
 }
