@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <template v-if="$nuxt.$route.name !== path">
+    <template v-if="$nuxt.$route.name !== path.replace(/^\//g, '')">
       <nuxt-link
         :to="path"
         class="menu_a">{{ text }}</nuxt-link>
