@@ -38,8 +38,14 @@ export default {
   },
   head() {
     return {
-      title: "blog",
-      meta: [{ hid: "og:title", property: "og:title", content: "blog | kik4" }],
+      title: "Articles",
+      meta: [
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: "Articles | kik4.work",
+        },
+      ],
       __dangerouslyDisableSanitizers: ["script"],
       script: [
         {

@@ -30,7 +30,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: "Virtual Scroll | kik4",
+          content: "Virtual Scroll | kik4.work",
         },
       ],
     }
