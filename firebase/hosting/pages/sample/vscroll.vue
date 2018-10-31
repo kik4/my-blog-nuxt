@@ -18,6 +18,7 @@
         :style="{transform: 'scaleY(' + (list.length * 50) +')'}"
         class="vscroll_spacer"/>
     </div>
+    <p>表示される要素のみをレンダリングすることで要素が大量にあってもスクロールの挙動を軽くできます。</p>
   </div>
 </template>
 
