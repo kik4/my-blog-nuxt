@@ -33,7 +33,7 @@
     <section class="footer">
       <div class="footer_menu">
         <span>Sitemap :</span>
-        <nuxt-link to="/">TOP</nuxt-link>
+        <nuxt-link to="/">Top</nuxt-link>
         <nuxt-link to="/articles">Articles</nuxt-link>
         <nuxt-link to="/sample">Sample</nuxt-link>
       </div>
