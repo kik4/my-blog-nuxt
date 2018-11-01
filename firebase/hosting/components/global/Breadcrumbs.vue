@@ -38,6 +38,8 @@ export default {
 .breadcrumbs {
   font-size: 0.8rem;
   color: #d5d5d5;
+  padding-bottom: 0.5rem;
+  border-bottom: #888 dotted 1px;
   margin-bottom: 0.8rem;
 }
 .elem {
