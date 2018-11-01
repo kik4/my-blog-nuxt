@@ -9,6 +9,9 @@
           <InternalHeaderMenu
             path="/articles"
             text="Articles"/>
+          <InternalHeaderMenu
+            path="/sample"
+            text="Sample"/>
           <ExternalHeaderMenu
             path="https://kik4.hatenablog.com"
             text="Blog" />
@@ -32,6 +35,7 @@
         <span>Sitemap :</span>
         <nuxt-link to="/">TOP</nuxt-link>
         <nuxt-link to="/articles">Articles</nuxt-link>
+        <nuxt-link to="/sample">Sample</nuxt-link>
       </div>
       <div class="footer_menu">
         <span>Link :</span>
