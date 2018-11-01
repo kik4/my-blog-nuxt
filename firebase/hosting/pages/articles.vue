@@ -1,6 +1,6 @@
 ﻿<template>
   <div class="container">
-    <Breadcrumbs :list="[{text:'Articles'}]" />
+    <Breadcrumbs :list="breadcrumbs" />
     <h1 class="page_title">Articles</h1>
     <template v-if="items && items.length > 0">
       <div
@@ -24,6 +24,8 @@
 <script>
 import axios from "axios"
 
+const blist = [{ path: "/articles", text: "Articles" }]
+
 export default {
   async fetch({ store, params }) {
     // check cache
@@ -35,6 +37,9 @@ export default {
   computed: {
     items() {
       return this.$store.state.blog.articles
+    },
+    breadcrumbs() {
+      return blist
     },
   },
   head() {
@@ -48,33 +53,7 @@ export default {
         },
       ],
       __dangerouslyDisableSanitizers: ["script"],
-      script: [
-        {
-          hid: "jsonld",
-          innerHTML: `{
-            "@context": "http://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": "${this.base_url()}",
-                  "name": "kik4.work"
-                }
-              }, {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": "${this.url()}",
-                  "name": "Articles"
-                }
-              }
-            ]
-          }`,
-          type: "application/ld+json",
-        },
-      ],
+      script: [this.jsonldBreadcrumbs(blist)],
     }
   },
   methods: {

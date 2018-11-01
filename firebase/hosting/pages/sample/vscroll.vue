@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Breadcrumbs :list="[{path:'/sample', text:'Sample'},{text:'Virtual Scroll'}]" />
+    <Breadcrumbs :list="breadcrumbs" />
     <h1 class="page_title">Virtual Scroll</h1>
     <div
       ref="vscroll"
@@ -24,6 +24,8 @@
 </template>
 
 <script>
+const blist = [{ path: "/sample", text: "Sample" }, { path: "/sample/vscroll", text: "Virtual Scroll" }]
+
 export default {
   head() {
     return {
@@ -36,40 +38,7 @@ export default {
         },
       ],
       __dangerouslyDisableSanitizers: ["script"],
-      script: [
-        {
-          hid: "jsonld",
-          innerHTML: `{
-            "@context": "http://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": "${this.base_url()}",
-                  "name": "kik4.work"
-                }
-              }, {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": "${this.base_url() + "/sample"}",
-                  "name": "Sample"
-                }
-              }, {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": "${this.url()}",
-                  "name": "Virtual Scroll"
-                }
-              }
-            ]
-          }`,
-          type: "application/ld+json",
-        },
-      ],
+      script: [this.jsonldBreadcrumbs(blist)],
     }
   },
   data() {
@@ -80,6 +49,9 @@ export default {
     }
   },
   computed: {
+    breadcrumbs() {
+      return blist
+    },
     vlist() {
       const count = 200 / 50 + 6
       return this.list.slice(this.start, this.start + count)

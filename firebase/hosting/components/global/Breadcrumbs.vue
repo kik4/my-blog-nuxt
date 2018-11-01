@@ -28,7 +28,10 @@ export default {
   },
   computed: {
     vlist() {
-      return [{ path: "/", text: "Top" }].concat(this.list)
+      const arr = [{ path: "/", text: "Top" }].concat(this.list)
+      const tmplist = JSON.parse(JSON.stringify(arr)) // deep copy
+      tmplist[tmplist.length - 1].path = ""
+      return tmplist
     },
   },
 }

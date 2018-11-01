@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Breadcrumbs :list="[{text:'Sample'}]" />
+    <Breadcrumbs :list="breadcrumbs" />
     <h1 class="page_title">Sample</h1>
     <div class="article">
       <div class="date">2018/10/31</div>
@@ -11,6 +11,8 @@
 </template>
 
 <script>
+const blist = [{ path: "/sample", text: "Sample" }]
+
 export default {
   head() {
     return {
@@ -23,34 +25,13 @@ export default {
         },
       ],
       __dangerouslyDisableSanitizers: ["script"],
-      script: [
-        {
-          hid: "jsonld",
-          innerHTML: `{
-            "@context": "http://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": "${this.base_url()}",
-                  "name": "kik4.work"
-                }
-              }, {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": "${this.url()}",
-                  "name": "Sample"
-                }
-              }
-            ]
-          }`,
-          type: "application/ld+json",
-        },
-      ],
+      script: [this.jsonldBreadcrumbs(blist)],
     }
+  },
+  computed: {
+    breadcrumbs() {
+      return blist
+    },
   },
 }
 </script>
