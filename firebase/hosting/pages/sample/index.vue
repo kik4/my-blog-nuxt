@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Breadcrumbs :list="[{text:'Sample'}]" />
     <h1 class="page_title">Sample</h1>
     <div class="article">
       <div class="date">2018/10/31</div>

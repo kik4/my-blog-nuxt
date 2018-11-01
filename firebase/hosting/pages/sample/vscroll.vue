@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Breadcrumbs :list="[{path:'/sample', text:'Sample'},{text:'Virtual Scroll'}]" />
     <h1 class="page_title">Virtual Scroll</h1>
     <div
       ref="vscroll"
@@ -32,6 +33,41 @@ export default {
           hid: "og:title",
           property: "og:title",
           content: "Virtual Scroll | kik4.work",
+        },
+      ],
+      __dangerouslyDisableSanitizers: ["script"],
+      script: [
+        {
+          hid: "jsonld",
+          innerHTML: `{
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "${this.base_url()}",
+                  "name": "kik4.work"
+                }
+              }, {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "${this.base_url() + "/sample"}",
+                  "name": "Sample"
+                }
+              }, {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "${this.url()}",
+                  "name": "Virtual Scroll"
+                }
+              }
+            ]
+          }`,
+          type: "application/ld+json",
         },
       ],
     }

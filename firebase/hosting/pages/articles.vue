@@ -1,5 +1,6 @@
 ﻿<template>
   <div class="container">
+    <Breadcrumbs :list="[{text:'Articles'}]" />
     <h1 class="page_title">Articles</h1>
     <template v-if="items && items.length > 0">
       <div
