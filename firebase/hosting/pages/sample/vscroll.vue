@@ -59,7 +59,7 @@ export default {
                 }
               }, {
                 "@type": "ListItem",
-                "position": 2,
+                "position": 3,
                 "item": {
                   "@id": "${this.url()}",
                   "name": "Virtual Scroll"
