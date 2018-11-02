@@ -1,6 +1,6 @@
 <template>
   <div class="breadcrumbs">
-    <template v-for="item in vlist">
+    <template v-for="(item, index) in vlist">
       <span :key="item.path">
         <nuxt-link
           v-if="item.path"
@@ -9,7 +9,8 @@
         <span
           v-else
           class="elem">{{ item.text }}</span>
-        <span v-if="vlist[vlist.length - 1] !== item"> > </span>
+        <span v-if="vlist.length - 1 > index"> &gt; </span>
+        <span v-else/>
       </span>
     </template>
   </div>
