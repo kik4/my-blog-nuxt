@@ -5,11 +5,9 @@
     <div
       :style="{transform: 'translateY(' + (start * itemSize) +'px)'}"
       class="vscroll_container">
-      <div
+      <slot
         v-for="item in vlist"
-        :key="item">
-        <slot :item="item"/>
-      </div>
+        :item="item"/>
     </div>
     <div
       :style="{transform: 'scaleY(' + (items.length * itemSize) +')'}"
@@ -33,19 +31,18 @@ export default {
     return {
       scrollTop: 0,
       start: 0,
+      height: 0,
     }
   },
   computed: {
     vlist() {
-      const count = 200 / this.itemSize + 7
+      const count = this.height / this.itemSize + 7
       return this.items.slice(this.start, this.start + count)
-    },
-    height() {
-      return 0
     },
   },
   mounted() {
     this.$refs.vscroll.addEventListener("scroll", this.handleScroll)
+    this.height = this.$refs.vscroll.clientHeight
   },
   unmounted() {
     this.$refs.vscroll.removeEventListener("scroll", this.handleScroll)
@@ -63,16 +60,15 @@ export default {
 
 <style scoped>
 .vscroll {
-  height: 200px;
-  width: 200px;
-  border: black 1px solid;
   overflow: auto;
   position: relative;
+  will-change: scroll-position;
 }
 .vscroll_container {
   position: absolute;
   top: 0;
   left: 0;
+  min-width: 100%;
 }
 .vscroll_spacer {
   position: absolute;

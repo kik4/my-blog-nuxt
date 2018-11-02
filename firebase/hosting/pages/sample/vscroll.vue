@@ -4,11 +4,14 @@
     <h1 class="page_title">Virtual Scroll</h1>
     <VirtualScroll
       :items="items"
-      :item-size="50">
+      :item-size="50"
+      class="vscroll">
       <div
         slot-scope="{item}"
         :style="{'background-color': `hsl(${item * 20 % 360}, 100%, 90%)`}"
-        class="item">Item #{{ item }}</div>
+        :key="item"
+        class="item"
+      >Item #{{ item }}</div>
     </VirtualScroll>
     <p>表示される要素のみをレンダリングすることで要素が大量にあってもスクロールの挙動を軽くできます。</p>
   </div>
@@ -49,8 +52,12 @@ export default {
 </script>
 
 <style scoped>
+.vscroll {
+  height: 400px;
+  width: 400px;
+  border: black 1px solid;
+}
 .item {
   height: 50px;
-  width: 200px;
 }
 </style>
