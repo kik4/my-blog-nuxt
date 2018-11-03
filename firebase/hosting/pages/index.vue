@@ -93,7 +93,7 @@
           </IndentBox>
           <InfoBody>詳細</InfoBody>
           <IndentBox>
-            このサイトです。コードは公開中（<a href="https://github.com/kik4/my-portfolio-nuxt">Github</a>）。
+            このサイトです。コードは公開中（<a href="https://github.com/kik4/my-portfolio-nuxt">GitHub</a>）。
           </IndentBox>
         </IndentBox>
       </IndentBox>
@@ -103,6 +103,15 @@
           <InfoBody>詳細</InfoBody>
           <IndentBox>
             Windows用フラッシュ暗算練習ソフト。何年も前に作ったのでハンドルが違います。コードも残っていませんが、ちゃんと使えると思います。
+          </IndentBox>
+        </IndentBox>
+      </IndentBox>
+      <IndentBox class="margin_bottom">
+        <InfoTitle>その他 (<a href="https://github.com/kik4">GitHub</a>)</InfoTitle>
+        <IndentBox>
+          <InfoBody>詳細</InfoBody>
+          <IndentBox>
+            いろいろ
           </IndentBox>
         </IndentBox>
       </IndentBox>
