@@ -16,14 +16,5 @@ module.exports = {
   // required to lint *.vue files
   plugins: ["vue"],
   // add your custom rules here
-  rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        semi: false,
-        printWidth: 120,
-        trailingComma: "all",
-      },
-    ],
-  },
+  rules: {},
 }
