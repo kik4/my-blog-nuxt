@@ -28,6 +28,10 @@
           <InfoTitle>プライベートで使う技術</InfoTitle>
           <InfoBody><TagList :list="['Go', 'GCP', 'DDD', 'PWA', 'SPA', 'サーバレス']" /></InfoBody>
         </InlineInfoBox>
+        <InlineInfoBox>
+          <InfoTitle>その他</InfoTitle>
+          <InfoBody>応用情報技術者など</InfoBody>
+        </InlineInfoBox>
       </IndentBox>
     </div>
     <div class="margin_bottom">
@@ -57,7 +61,7 @@
                 <li>ツール作成</li>
                 <li>コードレビュー</li>
                 <li>ASP.NET Web FormsからMVCへの順次移行提案・実施</li>
-                <li>CSVデータ出力カスタムDSLの設計・実行システムの実装</li>
+                <li>データ出力カスタムDSLの設計・式木を用いた実行システムの実装</li>
               </ul>
             </InfoBody>
           </IndentBox>
