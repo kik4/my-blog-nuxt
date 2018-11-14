@@ -55,6 +55,7 @@ export default {
 .vscroll {
   height: 400px;
   width: 400px;
+  max-width: 100%;
   border: black 1px solid;
 }
 .item {
