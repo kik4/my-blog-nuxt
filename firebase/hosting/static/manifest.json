@@ -1,6 +1,6 @@
 {
   "name": "kik4.work",
-  "short_name": "kik4.work",
+  "short_name": "kik4",
   "description": "kik4's page",
   "start_url": "/",
   "display": "standalone",
