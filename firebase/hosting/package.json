@@ -2,7 +2,7 @@
   "name": "my-blog-nuxt",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "kik4 <7163720+kik4@users.noreply.github.com>",
+  "author": "kik4 <kik4.contact@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
