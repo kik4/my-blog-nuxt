@@ -45,6 +45,13 @@ export default {
       return blist
     },
   },
+  mounted() {
+    // check cache
+    if (store.state.blog.articles && store.state.blog.articles.length > 0) {
+      return
+    }
+    await store.dispatch("blog/getArticles")
+  },
   head() {
     return {
       title: "Articles",
