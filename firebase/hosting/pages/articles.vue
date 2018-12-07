@@ -47,10 +47,10 @@ export default {
   },
   mounted() {
     // check cache
-    if (store.state.blog.articles && store.state.blog.articles.length > 0) {
+    if (this.$store.state.blog.articles && this.$store.state.blog.articles.length > 0) {
       return
     }
-    await store.dispatch("blog/getArticles")
+    this.$store.dispatch("blog/getArticles")
   },
   head() {
     return {
