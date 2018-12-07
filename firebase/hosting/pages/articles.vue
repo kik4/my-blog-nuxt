@@ -28,6 +28,9 @@ const blist = [{ path: "/articles", text: "Articles" }]
 
 export default {
   async fetch({ store, params }) {
+    if (!process.browser) {
+      return
+    }
     // check cache
     if (store.state.blog.articles && store.state.blog.articles.length > 0) {
       return
