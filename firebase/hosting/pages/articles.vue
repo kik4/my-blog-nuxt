@@ -13,11 +13,18 @@
         <div class="body">{{ item.body.substring(0, 100) }}...</div>
       </div>
     </template>
-    <template v-else-if="items && items.length === 0">
-      <div>取得中...</div>
-    </template>
     <template v-else>
-      <div>取得失敗</div>
+      <div
+        v-for="item in [1,2,3,4,5,6]"
+        :key="item"
+        class="article skelton"
+      >
+        <span class="date">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+        <h2>
+          <span>&nbsp;</span>
+        </h2>
+        <div class="body">&nbsp;</div>
+      </div>
     </template>
   </div>
 </template>
@@ -84,7 +91,7 @@ export default {
 <style scoped>
 h2 {
   font-size: 1.2rem;
-  margin-bottom: 0;
+  margin-bottom: 2px;
 }
 .article {
   padding: 5px;
@@ -97,5 +104,19 @@ h2 {
   font-size: 0.8rem;
   word-wrap: break-word;
   color: rgb(153, 153, 153);
+}
+.skelton > * {
+  color: transparent;
+  background: linear-gradient(60deg, #e0e0e0, #e0e0e0, #eeeeee, #e0e0e0, #e0e0e0);
+  background-size: 500%;
+  animation: SkeltonAnim 2s linear infinite;
+}
+@keyframes SkeltonAnim {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>
