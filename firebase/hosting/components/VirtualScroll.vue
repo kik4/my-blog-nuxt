@@ -1,17 +1,21 @@
 <template>
   <div
     ref="vscroll"
-    class="vscroll">
+    class="vscroll"
+  >
     <div
       :style="{transform: 'translateY(' + (start * itemSize) +'px)'}"
-      class="vscroll_container">
+      class="vscroll_container"
+    >
       <slot
         v-for="item in vlist"
-        :item="item"/>
+        :item="item"
+      />
     </div>
     <div
       :style="{transform: 'scaleY(' + (items.length * itemSize) +')'}"
-      class="vscroll_spacer"/>
+      class="vscroll_spacer"
+    />
   </div>
 </template>
 
