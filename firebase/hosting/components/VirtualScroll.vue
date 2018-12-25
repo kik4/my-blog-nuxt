@@ -68,6 +68,7 @@ export default {
   position: relative;
   will-change: scroll-position;
   transform: translateZ(0);
+  -webkit-overflow-scrolling: touch;
 }
 .vscroll_container {
   position: absolute;
