@@ -8,6 +8,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: "ja",
+    },
     title: "kik4.work",
     titleTemplate: "%s | kik4.work",
     meta: [
