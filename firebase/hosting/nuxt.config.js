@@ -84,17 +84,7 @@ module.exports = {
     BASE_URL: baseUrl,
     GAE_URL: gaeUrl,
   },
-  modules: [
-    ["@nuxtjs/sitemap"],
-    ["@nuxtjs/axios"],
-    [
-      "@nuxtjs/google-adsense",
-      {
-        id: "ca-pub-7788768385292493",
-        pageLevelAds: true,
-      },
-    ],
-  ],
+  modules: [["@nuxtjs/sitemap"], ["@nuxtjs/axios"]],
   sitemap: {
     path: "/sitemap.xml",
     hostname: baseUrl,
