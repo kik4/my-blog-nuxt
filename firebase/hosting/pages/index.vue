@@ -19,19 +19,19 @@
         <InlineInfoBox>
           <InfoTitle>エディタ</InfoTitle>
           <InfoBody>
-            <TagList :list="['Visual Studio Code']" />
+            <TagList :list="['Visual Studio Code']"/>
           </InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
-          <InfoTitle>主な業務経験技術</InfoTitle>
+          <InfoTitle>主な技術</InfoTitle>
           <InfoBody>
-            <TagList :list="['C#', 'JavaScript/TypeScript', 'ASP.NET Web Forms/MVC', 'PHP', 'Laravel', 'React+Redux', 'Vue.js', 'AWS', 'SQL Server', 'IIS', 'Jenkins']" />
+            <TagList :list="['JavaScript/TypeScript', 'Node.js','Express', 'Vue.js', 'SPA']"/>
           </InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
           <InfoTitle>プライベートで使う技術</InfoTitle>
           <InfoBody>
-            <TagList :list="['Go', 'GCP', 'DDD', 'PWA', 'SPA', 'サーバレス']" />
+            <TagList :list="['Go', 'GCP', 'DDD', 'PWA', 'サーバレス']"/>
           </InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
@@ -47,11 +47,13 @@
         <IndentBox>
           <InfoBody>担当工程</InfoBody>
           <IndentBox>
-            <TagList :list="['要件定義', '設計', '実装', 'テスト', '運用/保守']" />
+            <TagList :list="['要件定義', '設計', '実装', 'テスト', '運用/保守']"/>
           </IndentBox>
           <InfoBody>技術</InfoBody>
           <IndentBox>
-            <TagList :list="['C#', 'ASP.NET Web Forms/MVC', 'JavaScript', 'React+Redux', 'Vue.js', 'jQuery', 'AWS', 'SQL Server', 'IIS', 'Jenkins', 'GitBucket']" />
+            <TagList
+              :list="['C#', 'ASP.NET Web Forms/MVC', 'JavaScript', 'React+Redux', 'Vue.js', 'jQuery', 'AWS', 'SQL Server', 'IIS', 'Jenkins', 'GitBucket']"
+            />
           </IndentBox>
           <InfoBody>概要</InfoBody>
           <IndentBox>
@@ -78,11 +80,13 @@
         <IndentBox>
           <InfoBody>担当工程</InfoBody>
           <IndentBox>
-            <TagList :list="['設計', '実装', 'テスト', '運用/保守', 'デザイン']" />
+            <TagList :list="['設計', '実装', 'テスト', '運用/保守', 'デザイン']"/>
           </IndentBox>
           <InfoBody>技術</InfoBody>
           <IndentBox>
-            <TagList :list="['PHP', 'Laravel', 'JavaScript', 'React', 'jQuery', 'Apache', 'nginx', 'MariaDB', 'BootStrap', 'BitBucket']" />
+            <TagList
+              :list="['PHP', 'Laravel', 'JavaScript', 'React', 'jQuery', 'Apache', 'nginx', 'MariaDB', 'BootStrap', 'BitBucket']"
+            />
           </IndentBox>
           <InfoBody>概要</InfoBody>
           <IndentBox>
@@ -99,43 +103,52 @@
         <IndentBox>
           <InfoBody>技術</InfoBody>
           <IndentBox>
-            <TagList :list="['nuxt.js', 'Firebase Hosting', 'CircleCI', 'Github', 'Go', 'GAE', 'Cloud DataStore']" />
+            <TagList
+              :list="['nuxt.js', 'Firebase Hosting', 'CircleCI', 'Github', 'Go', 'GAE', 'Cloud DataStore']"
+            />
           </IndentBox>
           <InfoBody>詳細</InfoBody>
           <IndentBox>
-            このサイトです。コードは公開中（<a href="https://github.com/kik4/my-portfolio-nuxt">GitHub</a>）。
+            このサイトです。コードは公開中（
+            <a href="https://github.com/kik4/my-portfolio-nuxt">GitHub</a>）。
           </IndentBox>
         </IndentBox>
       </IndentBox>
       <IndentBox class="margin_bottom">
-        <InfoTitle>ガキが舐めてると潰すぞメーカー (<a href="https://kik4.github.io/nametsubu/">サイト</a>)</InfoTitle>
+        <InfoTitle>
+          ガキが舐めてると潰すぞメーカー (
+          <a href="https://kik4.github.io/nametsubu/">サイト</a>)
+        </InfoTitle>
         <IndentBox>
           <InfoBody>技術</InfoBody>
           <IndentBox>
-            <TagList :list="['React', 'GitHub Pages', 'canvas']" />
+            <TagList :list="['React', 'GitHub Pages', 'canvas']"/>
           </IndentBox>
           <InfoBody>詳細</InfoBody>
           <IndentBox>
-            YouTubeの動画サムネのようなものを作れるWebアプリ。（<a href="https://github.com/kik4/nametsubu">GitHub</a>）
+            YouTubeの動画サムネのようなものを作れるWebアプリ。（
+            <a href="https://github.com/kik4/nametsubu">GitHub</a>）
           </IndentBox>
         </IndentBox>
       </IndentBox>
       <IndentBox class="margin_bottom">
-        <InfoTitle>FlashANZAN (<a href="https://www.vector.co.jp/soft/winnt/edu/se480770.html">Vector</a>)</InfoTitle>
+        <InfoTitle>
+          FlashANZAN (
+          <a href="https://www.vector.co.jp/soft/winnt/edu/se480770.html">Vector</a>)
+        </InfoTitle>
         <IndentBox>
           <InfoBody>詳細</InfoBody>
-          <IndentBox>
-            Windows用フラッシュ暗算練習ソフト。何年も前に作ったのでハンドルが違います。コードも残っていませんが、ちゃんと使えると思います。
-          </IndentBox>
+          <IndentBox>Windows用フラッシュ暗算練習ソフト。何年も前に作ったのでハンドルが違います。コードも残っていませんが、ちゃんと使えると思います。</IndentBox>
         </IndentBox>
       </IndentBox>
       <IndentBox class="margin_bottom">
-        <InfoTitle>その他 (<a href="https://github.com/kik4">GitHub</a>)</InfoTitle>
+        <InfoTitle>
+          その他 (
+          <a href="https://github.com/kik4">GitHub</a>)
+        </InfoTitle>
         <IndentBox>
           <InfoBody>詳細</InfoBody>
-          <IndentBox>
-            いろいろ
-          </IndentBox>
+          <IndentBox>いろいろ</IndentBox>
         </IndentBox>
       </IndentBox>
     </div>
