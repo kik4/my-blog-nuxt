@@ -18,15 +18,21 @@
         </InlineInfoBox>
         <InlineInfoBox>
           <InfoTitle>エディタ</InfoTitle>
-          <InfoBody><TagList :list="['Visual Studio Code']" /></InfoBody>
+          <InfoBody>
+            <TagList :list="['Visual Studio Code']" />
+          </InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
           <InfoTitle>主な業務経験技術</InfoTitle>
-          <InfoBody><TagList :list="['C#', 'JavaScript/TypeScript', 'ASP.NET Web Forms/MVC', 'PHP', 'Laravel', 'React+Redux', 'Vue.js', 'AWS', 'SQL Server', 'IIS', 'Jenkins']" /></InfoBody>
+          <InfoBody>
+            <TagList :list="['C#', 'JavaScript/TypeScript', 'ASP.NET Web Forms/MVC', 'PHP', 'Laravel', 'React+Redux', 'Vue.js', 'AWS', 'SQL Server', 'IIS', 'Jenkins']" />
+          </InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
           <InfoTitle>プライベートで使う技術</InfoTitle>
-          <InfoBody><TagList :list="['Go', 'GCP', 'DDD', 'PWA', 'SPA', 'サーバレス']" /></InfoBody>
+          <InfoBody>
+            <TagList :list="['Go', 'GCP', 'DDD', 'PWA', 'SPA', 'サーバレス']" />
+          </InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
           <InfoTitle>その他</InfoTitle>
@@ -98,6 +104,19 @@
           <InfoBody>詳細</InfoBody>
           <IndentBox>
             このサイトです。コードは公開中（<a href="https://github.com/kik4/my-portfolio-nuxt">GitHub</a>）。
+          </IndentBox>
+        </IndentBox>
+      </IndentBox>
+      <IndentBox class="margin_bottom">
+        <InfoTitle>ガキが舐めてると潰すぞメーカー (<a href="https://kik4.github.io/nametsubu/">サイト</a>)</InfoTitle>
+        <IndentBox>
+          <InfoBody>技術</InfoBody>
+          <IndentBox>
+            <TagList :list="['React', 'GitHub Pages', 'canvas']" />
+          </IndentBox>
+          <InfoBody>詳細</InfoBody>
+          <IndentBox>
+            YouTubeの動画サムネのようなものを作れるWebアプリ。（<a href="https://github.com/kik4/nametsubu">GitHub</a>）
           </IndentBox>
         </IndentBox>
       </IndentBox>
