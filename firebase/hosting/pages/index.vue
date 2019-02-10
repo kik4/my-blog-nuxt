@@ -25,13 +25,7 @@
         <InlineInfoBox>
           <InfoTitle>主な技術</InfoTitle>
           <InfoBody>
-            <TagList :list="['JavaScript/TypeScript', 'Node.js','Express', 'Vue.js', 'SPA']"/>
-          </InfoBody>
-        </InlineInfoBox>
-        <InlineInfoBox>
-          <InfoTitle>プライベートで使う技術</InfoTitle>
-          <InfoBody>
-            <TagList :list="['Go', 'GCP', 'DDD', 'PWA', 'サーバレス']"/>
+            <TagList :list="['JavaScript/TypeScript', 'Node.js','Express', 'Vue.js', 'SPA', 'DDD']"/>
           </InfoBody>
         </InlineInfoBox>
         <InlineInfoBox>
